@@ -9,18 +9,16 @@ public class Plane extends Mobile {
 	private int player ; 
 	
 	public Plane (Direction diretion,Position position, Dimension dimension,int speed, String image) {
-		
+		super(diretion, position, dimension, speed, image);
 	}
 	
 	public boolean isPlayer (int player) {
-		return true;
+		return false;
 		
 	}
 	
 	public boolean hit ()	{
-		return true;
-
-		
+		return false;
 	}
 	
 	

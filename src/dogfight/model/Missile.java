@@ -8,18 +8,19 @@ public class Missile extends Mobile{
 	
 	private int MAX_DISTANCE_TRAVELED = 1400 ; 
 	private String IMAGE = "missile" ; 
-	private int distanceTraveled = 0 ; 
+	private int distanceTraveled = 0 ;
+	
 	
 	public Missile (Direction diretion,Position position, Dimension dimension,int speed, String image) {
-		
+		super(diretion, position, dimension, speed, image)	;
 	}
 	
-	public int getWidhtWithADirection (Direction diretion)	{
-		
+	public int getWidhtWithADirection (Direction direction)	{
+		return this.WIDTH ; 
 	}
 	
-	public int getHeightWithADirection(Direction diraction ) {
-		
+	public int getHeightWithADirection(Direction direction ) {
+		return this.HEIGHT ; 
 	}
 	
 	public void move()	{
@@ -27,7 +28,7 @@ public class Missile extends Mobile{
 	}
 	
 	public boolean isWeapon () {
-		return true;
+		return false;
 		
 	}
 
