@@ -2,6 +2,9 @@ package dogfight.view;
 
 import java.util.Observable;
 
+import dogfight.controller.IOrderPerformer;
+import dogfight.model.IDogfightModel;
+
 public class DogfightView implements Runnable,IViewSystem {
 	
 	

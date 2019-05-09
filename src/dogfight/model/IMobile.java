@@ -1,6 +1,6 @@
 package dogfight.model;
 
-public interface IMobile {
+public interface IMobile  {
 	
 	
 }
