@@ -5,6 +5,8 @@ package dogfight.model;
 public class Mobile implements IMobile {
 	
 	private int speed ; 
+	private Position position ; 
+	private Dimension dimension ; 
 	
 	public Mobile (Direction diretion,Position position, Dimension dimension,int speed, String image ) {
 		
@@ -28,6 +30,14 @@ public class Mobile implements IMobile {
 	}
 	public void moveLeft () {
 		
+	}
+
+	public Position getPosition() {
+		return position;
+	}
+
+	public Dimension getDimension() {
+		return dimension;
 	}
 	
 
