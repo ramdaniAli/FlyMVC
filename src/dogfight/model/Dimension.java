@@ -10,7 +10,8 @@ public class Dimension {
 	}
 	
 	public Dimension(Dimension dimension) {
-		
+		this.width=dimension.width;
+		this.height=dimension.height ; 
 	}
 
 	public int getWidth() {

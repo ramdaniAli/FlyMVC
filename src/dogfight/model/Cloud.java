@@ -2,15 +2,17 @@ package dogfight.model;
 
 public class Cloud extends Mobile{
 	
-	private int SPEED = 1 ; 
-	private int WIDTH = 300 ; 
+	private static int SPEED = 1 ; 
+	private static int WIDTH = 300 ; 
 	private static int HEIGHT = 150 ; 
 	
 	private static String IMAGE = "cloud" ; 
 	
 	
-	public Cloud (Direction direction, Dimension dimension)	{
-		super(direction, null, dimension, HEIGHT, IMAGE); 
+	public Cloud (Direction direction, Dimension dimension, Position position)	{
+	//	super(direction,null,  dimension, HEIGHT, IMAGE); 
+		//super(direction,null, dimension, HEIGHT, IMAGE);
+		super(direction, position, new Dimension(WIDTH, HEIGHT), SPEED, IMAGE);
 		
 	}
 
