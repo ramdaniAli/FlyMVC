@@ -19,12 +19,16 @@ public class DogfightView implements Runnable,IViewSystem {
 		
 	}
 	
-	public String DisplayMessage(String message)	{
-		return message;
-		
-	}
+
 	
 	public void closeAll() {
+		
+	}
+
+
+	@Override
+	public void displayMessage(String message) {
+		// TODO Auto-generated method stub
 		
 	}
 

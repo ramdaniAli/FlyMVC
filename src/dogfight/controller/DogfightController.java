@@ -1,6 +1,7 @@
 package dogfight.controller;
 
 import dogfight.model.IDogfightModel;
+import dogfight.view.IViewSystem;
 
 public class DogfightController implements IOrderPerformer {
 	
@@ -15,6 +16,17 @@ public class DogfightController implements IOrderPerformer {
 	}
 	
 	public void play () {
+		
+	}
+	
+	public void setViewSystem(IViewSystem viewSystem)	{
+	}
+	
+	public void launchMissile (int player) {
+		
+	}
+	
+	public void gameLoop()	{
 		
 	}
 
