@@ -22,7 +22,6 @@ public class GameFrame extends JFrame implements KeyListener{
 		this.setTitle(title);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.setResizable(false);
-		this.setVisible(true);
 		
 		final GamePanel gamepanel = new GamePanel(new GraphicsBuilder(dogfightModel)); 
 		this.setContentPane(gamepanel);
