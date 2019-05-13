@@ -8,6 +8,9 @@ import dogfight.model.IDogfightModel;
 public class DogfightView implements Runnable,IViewSystem {
 	
 	
+	public String message;
+
+
 	public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable)	{
 		
 	}
@@ -26,10 +29,9 @@ public class DogfightView implements Runnable,IViewSystem {
 	}
 
 
-	@Override
-	public void displayMessage(String message) {
-		// TODO Auto-generated method stub
-		
+	
+	public String displayMessage(String message) {
+		return this.message = message ; 
 	}
 
 }

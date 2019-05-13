@@ -6,15 +6,28 @@ import java.util.Observable;
 
 import javax.swing.JFrame;
 
+import dogfight.model.IDogfightModel;
+import dogfight.view.GraphicsBuilder;
+
 public class GameFrame extends JFrame implements KeyListener{
 	
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1343450448208426723L;
+	private IDogfightModel dogfightModel;
+
 
 	public GameFrame (String title, IEventPerformer performer, IGraphicsBuilder graphicBuilder, Observable observable) {
+		this.setTitle(title);
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		this.setResizable(false);
+		this.setVisible(true);
 		
+		final GamePanel gamepanel = new GamePanel(new GraphicsBuilder(dogfightModel)); 
+		this.setContentPane(gamepanel);
+		this.setLocationRelativeTo(null);
+		this.setVisible(true);
 	}
 
 	
