@@ -9,6 +9,8 @@ public class DogfightView implements Runnable,IViewSystem {
 	
 	
 	public String message;
+	
+	
 
 
 	public DogfightView(IOrderPerformer orderPerformer, IDogfightModel dogfightModel, Observable observable)	{
