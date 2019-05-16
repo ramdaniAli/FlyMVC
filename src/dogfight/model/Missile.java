@@ -2,28 +2,53 @@ package dogfight.model;
 
 public class Missile extends Mobile{
 	
-	private int SPEED = 4 ; 
-	private int WIDTH = 30 ;
-	private int HEIGHT = 10 ; 
+	private static int SPEED = 4 ; 
+	private static int WIDTH = 30 ;
+	private static int HEIGHT = 10 ; 
 	
-	private int MAX_DISTANCE_TRAVELED = 1400 ; 
-	private String IMAGE = "missile" ; 
+	private static  int MAX_DISTANCE_TRAVELED = 1400 ; 
+	private static String IMAGE = "missile" ; 
 	private int distanceTraveled = 0 ;
 	
 	
 	public Missile (Direction diretion,Position position, Dimension dimension,int speed, String image) {
-		super(diretion, position, dimension, speed, image)	;
+		super(diretion, position, new Dimension (HEIGHT, WIDTH), SPEED, IMAGE)	;
 	}
 	
 	public int getWidhtWithADirection (Direction direction)	{
-		return this.WIDTH ; 
+		switch( direction ) {
+		case UP :
+		case DOWN :
+			return HEIGHT ;
+			
+		case LEFT :
+		case RIGHT :
+		default :
+			return WIDTH ;
+		}
 	}
 	
 	public int getHeightWithADirection(Direction direction ) {
-		return this.HEIGHT ; 
+		
+		switch(direction) {
+		case UP :
+		case DOWN :
+			return WIDTH ;
+		
+		case LEFT :
+		case RIGHT :
+		default :
+			return HEIGHT ;
+		}
+
 	}
 	
 	public void move()	{
+		
+		this.distanceTraveled = +SPEED ;
+		if(this.distanceTraveled >= MAX_DISTANCE_TRAVELED ) {
+			this.getDogfightModel().removeMobile(this);
+		}
 		
 	}
 	
