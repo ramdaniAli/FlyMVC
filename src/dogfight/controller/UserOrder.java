@@ -2,22 +2,24 @@ package dogfight.controller;
 
 public class UserOrder implements IUserOrder {
 
-	private int player ; 
+	private final int player ;
+	private final Order order;
 	
-	public UserOrder (int player, Order order) {
-		
+	public UserOrder (final int player,final Order order) {
+		this.player = player;
+		this.order = order;
 	}
 
 	@Override
 	public Order getOrder() {
 		// TODO Auto-generated method stub
-		return null;
+		return this.order;
 	}
 
 	@Override
 	public int getPlayer() {
 		// TODO Auto-generated method stub
-		return 0;
+		return this.player;
 	}
 	
 }
