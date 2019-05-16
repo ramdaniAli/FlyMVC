@@ -1,6 +1,7 @@
 package dogfight.view;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import dogfight.controller.IOrderPerformer;
 import dogfight.controller.Order;
@@ -16,7 +17,7 @@ public class EventPerformer implements IEventPerformer{
 		
 	}
 	
-	public void eventPerform(KeyEvent keyCode)	{
+	public void eventPerform(KeyEvent keyCode) throws IOException	{
 		if (keyCode != null) {
 			this.getOrderPerformer().orderPerform(this.KeyCodeToUserOrder(keyCode.getKeyCode()));
 		}
