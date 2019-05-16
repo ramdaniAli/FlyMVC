@@ -10,17 +10,19 @@ public class Plane extends Mobile {
 	
 	private int player ; 
 	
-	public Plane (Direction diretion,Position position, Dimension dimension,int speed, String image) throws IOException {
+	public Plane (final Direction diretion,final Position position, final Dimension dimension,final int speed,final String image, final int player) throws IOException {
 		super(diretion, position, dimension, speed, image);
+		this.player=player;
 	}
 	
-	public boolean isPlayer (int player) {
-		return false;
+	public boolean isPlayer (final int player) {
+		return this.player == player;
 		
 	}
 	
 	public boolean hit ()	{
-		return false;
+		this.getDogfightModel().removeMobile(this);
+		return true ; 
 	}
 	
 	

@@ -1,5 +1,6 @@
 package dogfight.model;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Observable;
 
@@ -18,7 +19,7 @@ public class DogfightModel extends Observable implements IDogfightModel{
 	}
 
 	@Override
-	public void buildArea(Dimension dimension) {
+	public void buildArea(Dimension dimension) throws IOException {
 		// TODO Auto-generated method stub
 		this.sky=new Sky(dimension);
 		
