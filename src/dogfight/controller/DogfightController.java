@@ -12,7 +12,7 @@ import dogfight.view.IViewSystem;
 public class DogfightController implements IOrderPerformer {
 	
 	private int TIME_SLEEP = 30 ; 
-	private final IDogfightModel dogfightModel ; 
+	private IDogfightModel dogfightModel ; 
 	private IViewSystem viewSystem;
 	
 	public DogfightController(final IDogfightModel dogfightModel) {
@@ -50,7 +50,7 @@ public class DogfightController implements IOrderPerformer {
 	}
 }
 	
-	public void play () {
+	public void play ()  {
 		this.gameLoop();
 		this.viewSystem.displayMessage("end round !") ;
 		
@@ -58,6 +58,7 @@ public class DogfightController implements IOrderPerformer {
 	
 	public void setViewSystem(final IViewSystem viewSystem)	{
 		this.viewSystem = viewSystem ; 
+		
 	}
 	
 	public void launchMissile (final int player) throws IOException {
@@ -91,8 +92,8 @@ public class DogfightController implements IOrderPerformer {
 		this.dogfightModel.addMobile(missile);
 	}
 	
-	public void gameLoop()	{
-		
+	public void gameLoop() 	{
+	
 	}
 	
 	private void manageCollision() {
